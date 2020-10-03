@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint 'src/**'",
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests",
     "jest:clearCache": "npx jest --clearCache"
   },
