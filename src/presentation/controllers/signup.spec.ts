@@ -1,5 +1,5 @@
 import { SignUpController } from './signup'
-import { MissingParamError } from '../errors/missin-param-error'
+import { MissingParamError } from '../errors/missing-param-error'
 
 describe('SignUp Controller', () => {
   test('Should return 400 if no name is provided', () => {
@@ -44,7 +44,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('password'))
   })
 
-  test('Should return 400 if no password is provided', () => {
+  test('Should return 400 if no password confirmation is provided', () => {
     const sut = new SignUpController()
     const httpRequest = {
       body: {
